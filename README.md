@@ -1,65 +1,104 @@
-# About Dataset (The Dataset was Downloaded from [Kaggle Website](https://www.kaggle.com/datasets/taeefnajib/used-car-price-prediction-dataset) )
 
-## About the Data
-**Used Car Price Prediction Dataset is a comprehensive collection of automotive information extracted from the popular automotive marketplace website, https://www.cars.com. This dataset comprises 4,009 data points, each representing a unique vehicle listing, and includes nine distinct features providing valuable insights into the world of automobiles.**
+# Used Car Price Prediction Model
 
-**Features in the Dataset**
-- *Brand & Model*: Identify the brand or company name along with the specific model of each vehicle.
-- *Model Year*: Discover the manufacturing year of the vehicles, crucial for assessing depreciation and technology advancements.
-- *Milage*: Obtain the mileage of each vehicle, a key indicator of wear and tear and potential maintenance requirements.
-- *Fuel Type*: Learn about the type of fuel the vehicles run on, whether it's gasoline, diesel, electric, or hybrid.
-- *Engine Type*: Understand the engine specifications, shedding light on performance and efficiency.
-- *Transmission*: Determine the transmission type, whether automatic, manual, or another variant.
-- *Exterior & Interior Colors*: Explore the aesthetic aspects of the vehicles, including exterior and interior color options.
-- *Accident History*: Discover whether a vehicle has a prior history of accidents or damage, crucial for informed decision-making.
-- *Clean Title*: Evaluate the availability of a clean title, which can impact the vehicle's resale value and legal status.
-- *Price*: Access the listed prices for each vehicle, aiding in price comparison and budgeting.
+## Dataset Overview
 
-**Features used in training model**
-- *Brand & Model*
-- *Model Year*
-- *Milage*
-- *Fuel Type*
-- *Transmission*
-- *Accidnet History*
-- *Clean Title*
+This project utilizes the [Used Car Price Prediction Dataset](https://www.kaggle.com/datasets/taeefnajib/used-car-price-prediction-dataset), a comprehensive collection of automotive listings sourced from [cars.com](https://www.cars.com). The dataset contains 4,009 unique vehicle entries, each described by a rich set of features that capture essential aspects of used car valuation.
 
-**Target Feature**
-- *Price*
+### Key Features
 
-# Result Obtained
+- **Brand & Model:** Manufacturer and specific model of the vehicle.
+- **Model Year:** Year of manufacture, crucial for assessing depreciation and technological relevance.
+- **Mileage:** Total distance traveled, indicating wear and maintenance needs.
+- **Fuel Type:** Type of fuel (gasoline, diesel, electric, hybrid).
+- **Engine Type:** Engine specifications for performance and efficiency insights.
+- **Transmission:** Transmission type (automatic, manual, etc.).
+- **Exterior & Interior Colors:** Aesthetic details of the vehicle.
+- **Accident History:** Records of prior accidents or damage.
+- **Clean Title:** Indicates legal status and resale value.
+- **Price:** Listed price, serving as the target variable.
 
-The modeling process began by training several algorithms [Random Forest, Support Vector Regression, Decision Tree, and Linear Regression], on a subset of the training data. Each model was evaluated using Mean Absolute Error (MAE) to determine its predictive accuracy. Based on its superior performance, the Random Forest Regressor was selected and subsequently trained on the entire training set.
+### Features Used for Model Training
 
-When evaluated on the hold-out test set, the Random Forest model achieved a Mean Absolute Error of 15,263.36 and an R² score of 0.64. The MAE indicates that, on average, the model's price predictions deviate from actual prices by approximately $15,263.36. The R² score of 0.64 means that the model explains 64% of the variance in used car prices, reflecting a strong relationship between the selected features and the target variable.
+- Brand & Model
+- Model Year
+- Mileage
+- Fuel Type
+- Transmission
+- Accident History
+- Clean Title
 
-## Intermittent Result
+**Target Variable:**
+- Price
 
-**performance Metric Used:**
-- Mean Absolute Error
+
+## Modeling Approach & Results
+
+Multiple machine learning algorithms were evaluated, including Random Forest, Support Vector Regression, Decision Tree, and Linear Regression. Each model was assessed using Mean Absolute Error (MAE) to determine predictive accuracy.
+
+**Best Model:**
+- **Random Forest Regressor**
+
+**Final Performance on Test Set:**
+- **Mean Absolute Error (MAE):** $15,263.36
+- **R² Score:** 0.64
+
+This means the model’s predictions deviate from actual prices by about $15,263.36 on average, and it explains 64% of the variance in used car prices—a strong result for this domain.
+
+### Model Comparison (MAE)
+
+- Random Forest Regressor: 17,174.41
+- Support Vector Regressor: 27,250.01
+- Decision Tree Regressor: 20,918.42
+- Linear Regression: 20,738.51
 
 **Hyperparameters:**
-- Default values
+- Default values were used for all models.
 
-**Models employed and their performance (Mean Absolute Error):**
-- Random Forest Regressor: 17174.41
-- Support Vector Regressor: 27250.01
-- Decision Tree Regressor: 20918.42
-- Linear Regression: 20738.51
 
-## Final Result
 
-**Selected Model:**
-- Random Forest Regressor
+## Conclusion
 
-**performance metrics:**
-- Mean Absolute Error
-- R2 Score
+This model provides reliable price estimates for used cars, supporting dealers, sellers, and buyers in making data-driven decisions. While some prediction error remains, the model offers valuable guidance for pricing, inventory management, and negotiations.
 
-**performance Obtained**
-- Mean Absolute Error: 15263.36
-- R2 Score: 0.64
 
-# Conclusion
 
-For car dealers and sellers, these results signify that the model provides reasonably accurate price estimates, helping to set competitive and fair prices based on key vehicle attributes. While some prediction error remains, the model offers valuable guidance for pricing decisions, inventory management, and negotiations, ultimately supporting more informed and data-driven business strategies.
+## Getting Started
+
+### Prerequisites
+
+- Python 3.11+
+- Required Python packages (see `environment.yml`)
+- Download the dataset from [Kaggle](https://www.kaggle.com/datasets/taeefnajib/used-car-price-prediction-dataset)
+
+### Installation & Usage
+
+1. **Clone the repository:**
+	```sh
+	git clone https://github.com/Yeshua235/used-car-price-prediction.git
+	cd used-car-price-prediction
+	```
+
+2. **Install dependencies:**
+	```sh
+	conda env create -f environment.yml
+	```
+
+3. **Download and extract the dataset:**
+	Place `used_cars.csv` in the `archive/` directory.
+
+4. **Run the model training script:**
+
+5. **Evaluate the model:**
+	Review the output metrics and generated model file (`used_car_price_predictor.pkl`).
+
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [Kaggle](https://www.kaggle.com/)
+- [scikit-learn](https://scikit-learn.org/)
+- All contributors and data providers
