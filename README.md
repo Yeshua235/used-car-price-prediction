@@ -1,4 +1,3 @@
-
 # Used Car Price Prediction Model
 
 ## Dataset Overview
@@ -85,12 +84,45 @@ This model provides reliable price estimates for used cars, supporting dealers, 
 	```
 
 3. **Download and extract the dataset:**
-	Place `used_cars.csv` in the `archive/` directory.
+	- Place `used_cars.csv` in the `archive/` directory.
 
 4. **Run the model training script:**
+    - Open and run `used-car-price-prediction.ipynb` in Jupyter Notebook or VS Code.
 
 5. **Evaluate the model:**
 	Review the output metrics and generated model file (`used_car_price_predictor.pkl`).
+
+
+### Installation & Usage (with pip)
+
+If you prefer to use pip instead of conda, follow these steps:
+
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/Yeshua235/used-car-price-prediction.git
+    cd used-car-price-prediction
+    ```
+
+2. **Create and activate a virtual environment (recommended):**
+    ```sh
+    python -m venv venv
+    .\venv\Scripts\activate
+    ```
+    *(On macOS/Linux, use `source venv/bin/activate`)*
+
+3. **Install dependencies with pip:**
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4. **Download and extract the dataset:**
+    Place `used_cars.csv` in the `archive/` directory.
+
+5. **Run the model training script or notebook:**
+    - Open and run `used-car-price-prediction.ipynb` in Jupyter Notebook or VS Code.
+
+6. **Evaluate the model:**
+    Review the output metrics and generated model file (`used_car_price_predictor.pkl`).
 
 
 ## License
